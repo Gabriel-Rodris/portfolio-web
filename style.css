@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: #121713;
+  --panel: #1a211b;
+  --panel-raised: #222a22;
+  --ink: #f4f5e9;
+  --muted: #bbc3b4;
+  --accent: #def89c;
+  --edge: #3a473b;
+  --font: Geist, system-ui, sans-serif;
+  --mono: "Geist Mono", monospace;
+  font-family: var(--font);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+a:hover { color: var(--accent); }
+h1, h2, h3, p, figure { margin: 0; }
+p { line-height: 1.65; }
+img { display: block; max-width: 100%; height: auto; }
+.wrap { width: min(1152px, calc(100% - 64px)); margin-inline: auto; }
+.skip { position: absolute; top: 10px; left: 10px; transform: translateY(-160%); padding: 12px; background: var(--ink); color: var(--bg); z-index: 2; }
+.skip:focus { transform: none; }
+.mast { min-height: 76px; border-bottom: 1px solid var(--edge); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; }
+.wordmark > span { display: grid; grid-auto-flow: column; place-content: center; width: 40px; height: 40px; border: 1px solid var(--edge); border-radius: 10px; font: 600 15px var(--mono); }
+.wordmark > span > span { color: var(--accent); }
+nav { display: flex; gap: clamp(12px, 3vw, 36px); }
+nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: .92rem; color: var(--muted); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(250px, .85fr); align-items: center; gap: clamp(32px, 6vw, 96px); padding-block: clamp(64px, 9vw, 115px); }
+.eyebrow { color: var(--accent); font: 500 .76rem/1.55 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+.dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; margin-right: .45rem; background: var(--accent); }
+h1 { margin-top: 22px; font-size: clamp(3rem, 6.4vw, 6.1rem); line-height: .97; letter-spacing: -.073em; font-weight: 750; }
+h1 em { color: var(--accent); font: italic 400 1.10em/.94 "Instrument Serif", Georgia, serif; letter-spacing: -.035em; }
+.intro { margin-top: 24px; color: var(--muted); font-size: clamp(1rem, 2vw, 1.2rem); max-width: 490px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 48px; padding: 0 17px; border: 1px solid transparent; border-radius: 9px; text-decoration: none; font-weight: 650; transition: background-color .18s, border-color .18s, color .18s; }
+.primary { background: var(--accent); color: #1c2515; }
+.primary:hover { color: #121713; background: #efffd0; }
+.secondary { border-color: var(--edge); }
+.secondary:hover { border-color: var(--accent); }
+.portrait { background: var(--panel); padding: 10px; border: 1px solid var(--edge); border-radius: 16px; }
+.portrait img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 9px; }
+.portrait figcaption { padding: 12px 5px 3px; color: var(--muted); font: 400 .8rem var(--mono); }
+.section { padding-block: 56px; border-top: 1px solid var(--edge); }
+.section-title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 24px; flex-wrap: wrap; margin-bottom: 25px; }
+h2 { font-size: clamp(2.1rem, 4.5vw, 3.7rem); line-height: 1.1; letter-spacing: -.055em; }
+h3 { font-size: clamp(1.38rem, 2.7vw, 2.12rem); line-height: 1.14; letter-spacing: -.035em; }
+.section-title a, .text-link { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.feature, .card { background: var(--panel); border: 1px solid var(--edge); border-radius: 16px; }
+.feature { display: grid; grid-template-columns: 1fr .9fr; gap: 24px; align-items: center; padding: clamp(20px, 4vw, 42px); }
+.feature h3, .card h3, .journey h3 { margin-top: 8px; }
+.feature-copy > p:not(.eyebrow), .card > p:not(.eyebrow), .journey p:not(.eyebrow), .contact p { color: var(--muted); margin-top: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 18px 0 0; list-style: none; }
+.tags li { border: 1px solid var(--edge); padding: 5px 9px; border-radius: 6px; color: var(--muted); font-size: .8rem; }
+.text-link { margin-top: 10px; color: var(--accent); }
+.flow { display: grid; justify-items: start; gap: 5px; padding: 24px; border-radius: 12px; background: #253524; }
+.flow-heading { margin-bottom: 6px; color: var(--accent); font: 500 .78rem var(--mono); }
+.flow span { width: 100%; padding: 9px 12px; border: 1px solid #56734f; border-radius: 7px; background: #1c291d; }
+.flow i { margin-inline-start: 12px; color: var(--accent); font-style: normal; }
+.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-block: 14px; }
+.card { padding: clamp(18px, 3vw, 28px); }
+.game img { width: 100%; border-radius: 10px; border: 1px solid var(--edge); }
+.journey { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 62px; }
+.journey ol { list-style: none; margin: 0; padding: 0; }
+.journey li { border-left: 1px solid var(--edge); padding: 0 0 22px 19px; }
+.journey li:last-child { padding-bottom: 0; }
+.contact { display: flex; justify-content: space-between; align-items: center; gap: 20px 28px; flex-wrap: wrap; background: var(--panel-raised); padding: clamp(22px, 4vw, 42px); border: 1px solid var(--edge); border-radius: 16px; }
+.contact .actions { margin: 0; }
+footer { padding-block: 27px; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); font-size: .88rem; }
+footer a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 36px); }
+  .hero, .feature, .journey { grid-template-columns: 1fr; }
+  .portrait { max-width: 340px; width: 100%; }
+  .hero { gap: 32px; }
+}
+@media (max-width: 490px) {
+  .mast { align-items: flex-start; flex-direction: column; gap: 2px; padding-top: 12px; }
+  nav { width: 100%; justify-content: space-between; }
+  .project-grid { grid-template-columns: 1fr; }
+  .section { padding-block: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
