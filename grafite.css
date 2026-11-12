@@ -1,0 +1,28 @@
+.gr[data-palette="grafite"] {
+  color-scheme: dark;
+  --ink: #f2f0f7;
+  --muted: #c1bdcd;
+  --line: #393545;
+  --bg: #17161e;
+  --paper: #201e2a;
+  --accent: #bca7fa;
+  --on-accent: #231738;
+  --mark: #c0a8ff;
+  --palette-label: #d1bfff;
+  --palette-title: #cbb7ff;
+  --palette-header: #1d1a25;
+  --palette-band: #292338;
+  --palette-band-text: #e2d8f8;
+  --palette-halo: #514078;
+  --palette-outline: #8e75bd;
+  --palette-photo-border: #322748;
+  --palette-feature-border: #5b4d72;
+  --palette-cms: #2b233a;
+  --palette-tag-border: #685680;
+  --palette-tag-text: #e2d5fa;
+  --palette-logo: #e9e4ef;
+}
+
+.gr .portrait-grafite img {
+  background: var(--palette-halo) url("assets/fundo-retrato-grafite.webp") center / cover no-repeat padding-box;
+}

@@ -3,120 +3,218 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gabriel Rodrigues · Desenvolvimento Web</title>
-  <meta name="description" content="Portfólio de Gabriel Rodrigues, desenvolvedor web em Brasília. Projetos em WordPress, JavaScript, React e Godot.">
-  <meta name="theme-color" content="#121713">
-  <link rel="canonical" href="https://gabriel-rodris.github.io/portfolio-web/">
+  <meta name="description" content="Portfólio de Gabriel Rodrigues, desenvolvedor front-end em Brasília. Projetos web na Embratur, experiência profissional e trabalhos na DotSmith.">
+  <meta name="theme-color" content="#17161e">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Gabriel Rodrigues · Desenvolvedor front-end">
+  <meta property="og:description" content="Projetos web na Embratur e trabalhos na DotSmith.">
+  <title>Gabriel Rodrigues · Desenvolvedor front-end</title>
+  <link rel="canonical" href="https://gabriel-rodris.github.io/portfolio-web/">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Gabriel Rodrigues · Portfólio">
-  <meta property="og:description" content="Projetos de desenvolvimento web, sistemas de gestão e jogos independentes.">
   <meta property="og:url" content="https://gabriel-rodris.github.io/portfolio-web/">
-  <meta property="og:image" content="https://gabriel-rodris.github.io/portfolio-web/assets/gabriel.webp">
-  <meta property="og:image:width" content="612">
-  <meta property="og:image:height" content="612">
-  <meta property="og:image:alt" content="Retrato de Gabriel Rodrigues">
+  <meta property="og:image" content="https://gabriel-rodris.github.io/portfolio-web/assets/compartilhamento-grafite.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Página inicial do portfólio de Gabriel Rodrigues">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="grafite.css">
+  <script defer src="assets/gsap.min.js"></script>
+  <script defer src="motion.js"></script>
 </head>
-<body>
+<body class="gr" data-palette="grafite">
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-  <header class="mast wrap">
-    <a class="wordmark" href="./" aria-label="Gabriel Rodrigues, início"><span aria-hidden="true">gr<span>.</span></span> Gabriel Rodrigues</a>
-    <nav aria-label="Navegação principal">
-      <a href="#projetos">Projetos</a><a href="#trajetoria">Trajetória</a><a href="#contato">Contato</a>
-    </nav>
+  <header class="header" id="inicio">
+    <div class="wrap mast">
+      <a class="wordmark" href="#inicio" aria-label="Gabriel Rodrigues, início">Gabriel<span aria-hidden="true">.</span></a>
+      <nav aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#trajetoria">Trajetória</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="plain mast-contact" href="https://www.linkedin.com/in/gabriel-rodrigues-dev/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
-  <main id="conteudo">
-    <section class="hero wrap" aria-labelledby="titulo">
-      <div>
-        <p class="eyebrow"><span class="dot"></span> Desenvolvedor web · Brasília, DF</p>
-        <h1 id="titulo">Interfaces web.<br><em>Sistemas de gestão.</em></h1>
-        <p class="intro">Sou Gabriel Rodrigues. Desenvolvo sites e sistemas que organizam fluxos de inscrição, gestão interna e venda de produtos.</p>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="wrap hero" aria-labelledby="titulo">
+      <div class="hero-copy">
+        <p class="kicker">Brasília, DF</p>
+        <h1 id="titulo">Olá, sou <br><em>Gabriel Rodrigues.</em></h1>
+        <p class="role">Desenvolvedor front-end</p>
+        <p class="intro">Desenvolvo sites, plataformas de inscrição e sistemas de gestão de conteúdo na Embratur.</p>
         <div class="actions">
-          <a class="button primary" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
-          <a class="button secondary" href="https://github.com/Gabriel-Rodris">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="action" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
+          <a class="plain" href="https://github.com/Gabriel-Rodris" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <figure class="portrait">
-        <img src="assets/gabriel.webp" width="612" height="612" alt="Retrato de Gabriel Rodrigues" fetchpriority="high">
-        <figcaption>Gabriel Rodrigues</figcaption>
+      <figure class="portrait portrait-grafite">
+        <img src="assets/retrato-recortado.webp" alt="Retrato de Gabriel Rodrigues" width="680" height="680" fetchpriority="high">
       </figure>
     </section>
 
-    <section id="projetos" class="wrap section" aria-labelledby="projetos-titulo">
-      <div class="section-title">
-        <h2 id="projetos-titulo">Projetos</h2>
-        <a href="https://github.com/Gabriel-Rodris?tab=repositories">Repositórios no GitHub <span aria-hidden="true">↗</span></a>
+    <section class="skillband" aria-labelledby="tecnologias">
+      <div class="wrap">
+        <h2 class="kicker" id="tecnologias">Tecnologias</h2>
+        <ul class="tags">
+          <li>JavaScript</li><li>TypeScript</li><li>React</li><li>Angular</li><li>WordPress</li><li>Elementor</li><li>JetEngine</li><li>Payload CMS</li><li>Git</li>
+        </ul>
       </div>
-      <article class="feature">
-        <div class="feature-copy">
-          <p class="eyebrow">Embratur · Projeto profissional</p>
-          <h3>Plataforma de Patrocínios</h3>
-          <p>Participei do desenvolvimento, em WordPress, do sistema usado para receber inscrições de projetos interessados no edital de patrocínios da Embratur.</p>
-          <ul class="tags" aria-label="Características do projeto"><li>WordPress</li><li>Formulários</li><li>Fluxo de inscrição</li></ul>
-          <a class="text-link" href="https://patrocinio.embratur.com.br/">Conhecer o portal <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="flow" aria-hidden="true">
-          <div class="flow-heading">Processo de patrocínio</div>
-          <span>Cadastro do proponente</span><i>↓</i><span>Inscrição do projeto</span><i>↓</i><span>Análise da proposta</span>
-        </div>
-      </article>
-      <div class="project-grid">
-        <article class="card">
-          <p class="eyebrow">Projeto profissional</p>
-          <h3>Hermes</h3>
-          <p>Participei do desenvolvimento de um sistema interno de gestão financeira que apoia o controle de pagamentos.</p>
-          <ul class="tags"><li>Sistema interno</li><li>Gestão financeira</li></ul>
-        </article>
-        <article class="card">
-          <p class="eyebrow">Projeto profissional</p>
-          <h3>Biohack</h3>
-          <p>Projeto de e-commerce para cliente, voltado à apresentação e à venda de produtos pela web.</p>
-          <ul class="tags"><li>E-commerce</li><li>Desenvolvimento web</li></ul>
-        </article>
-        <article class="card">
-          <p class="eyebrow">Repositório público · Estudo</p>
-          <h3>Projeto Refund</h3>
-          <p>Interface para registrar despesas por categoria, remover lançamentos e acompanhar o valor total dos reembolsos.</p>
-          <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
-          <a class="text-link" href="https://github.com/Gabriel-Rodris/Projeto-Refund">Ver código <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="card">
-          <p class="eyebrow">Repositório público · Estudo</p>
-          <h3>Quiz React</h3>
-          <p>Quiz de programação com perguntas de múltipla escolha, pontuação e reinício. O estado das etapas fica centralizado no Context do React.</p>
-          <ul class="tags"><li>React</li><li>Context</li><li>Vite</li></ul>
-          <a class="text-link" href="https://github.com/Gabriel-Rodris/Quiz-React">Ver código <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-      <article class="feature game">
-        <div class="feature-copy">
-          <p class="eyebrow">DotSmith · Jogo independente</p>
-          <h3>Runecast</h3>
-          <p>Projeto de estratégia em Godot. O jogador lança runas, posiciona heróis e combina unidades para enfrentar ondas em três linhas de combate.</p>
-          <ul class="tags"><li>Godot</li><li>GDScript</li><li>Pixel art</li></ul>
-          <a class="text-link" href="https://store.steampowered.com/app/5126340/Runecast/">Ver demo na Steam <span aria-hidden="true">↗</span></a>
-        </div>
-        <img src="assets/runecast.webp" width="1180" height="664" loading="lazy" alt="Captura de Runecast com a interface do jogo em pixel art">
-      </article>
     </section>
 
-    <section id="trajetoria" class="wrap section journey" aria-labelledby="trajetoria-titulo">
+    <section class="work wrap" id="projetos" aria-labelledby="titulo-projetos">
+      <header class="section-head">
+        <div>
+          <p class="kicker">Embratur</p>
+          <h2 id="titulo-projetos">Projetos em destaque</h2>
+        </div>
+        <p>Plataformas e sites para o turismo brasileiro.</p>
+      </header>
+      <div class="cases">
+        <article class="case feature patrocinio">
+          <figure class="case-image patrocinio">
+            <img src="assets/patrocinio.webp" alt="Imagem de apresentação do portal de Patrocínios, com um aperto de mãos sobre uma mesa" width="680" height="680" loading="lazy">
+          </figure>
+          <div class="case-copy">
+            <p class="category">Plataforma de inscrição</p>
+            <h3>Patrocínios Embratur</h3>
+            <p>Participei do desenvolvimento da plataforma que recebe propostas para o edital público de patrocínios da Embratur.</p>
+            <ul class="project-tags" aria-label="Tecnologias do front-end atual"><li>React</li><li>Vite</li><li>Tailwind CSS</li></ul>
+            <a class="case-link" href="https://patrocinio.embratur.com.br/" target="_blank" rel="noopener noreferrer">Visitar Patrocínios <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case feature cms">
+          <figure class="case-image cms-visual">
+            <img src="assets/embratur-cms.webp" alt="Captura da página inicial do portal desenvolvido, com uma notícia em destaque sobre o turismo internacional" width="1280" height="560" loading="lazy">
+          </figure>
+          <div class="case-copy">
+            <p class="category">Site institucional</p>
+            <h3>Portal da Embratur com CMS</h3>
+            <p>Desenvolvi o portal e o CMS que permite à equipe editar e publicar páginas e notícias, além de gerenciar arquivos de mídia.</p>
+            <ul class="project-tags" aria-label="Tecnologias do projeto"><li>React</li><li>TypeScript</li><li>Payload CMS</li></ul>
+            <a class="case-link" href="https://embratur.com.br/" target="_blank" rel="noopener noreferrer">Visitar site da Embratur <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case">
+          <figure class="case-image lab">
+            <img src="assets/lab.webp" alt="Arte do EmbraturLAB com o texto Inovação no Turismo" width="820" height="359" loading="lazy">
+          </figure>
+          <div class="case-copy">
+            <p class="category">Inovação no turismo</p>
+            <h3>EmbraturLAB</h3>
+            <p>Portal que reúne editais, iniciativas e programas de inovação aplicados ao turismo.</p>
+            <a class="case-link" href="https://www.embraturlab.com.br/" target="_blank" rel="noopener noreferrer">Visitar EmbraturLAB <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case">
+          <figure class="case-image marca">
+            <img src="assets/marca.webp" alt="Logotipo colorido da Marca Brasil" width="820" height="602" loading="lazy">
+          </figure>
+          <div class="case-copy">
+            <p class="category">Identidade do turismo</p>
+            <h3>Marca Brasil</h3>
+            <p>Site que apresenta a história e disponibiliza os materiais oficiais da marca do turismo brasileiro.</p>
+            <a class="case-link" href="https://www.marca.visitbrasil.com/" target="_blank" rel="noopener noreferrer">Visitar Marca Brasil <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="case">
+          <figure class="case-image parques">
+            <img src="assets/parques.webp" alt="Lagoa entre dunas em um dos roteiros de Parques Naturais" width="640" height="427" loading="lazy">
+          </figure>
+          <div class="case-copy">
+            <p class="category">Turismo de natureza</p>
+            <h3>Parques Naturais</h3>
+            <p>Site do Visit Brasil com roteiros que conectam destinos e áreas naturais protegidas.</p>
+            <a class="case-link" href="https://parquesnaturais.visitbrasil.com/" target="_blank" rel="noopener noreferrer">Explorar roteiros <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap career" id="trajetoria" aria-label="Trajetória profissional e acadêmica">
       <div>
-        <h2 id="trajetoria-titulo">Trajetória</h2>
-        <p>Sou formado em Análise e Desenvolvimento de Sistemas pelo UniCEUB. Na Embratur, comecei no desenvolvimento de sites e aplicações como estagiário e passei a atuar como desenvolvedor júnior.</p>
+        <h2>Experiência</h2>
+        <dl>
+          <div>
+            <dt>Desenvolvedor júnior · Embratur</dt>
+            <dd>Fev. de 2025 – atual</dd>
+            <dd>Desenvolvi o portal institucional com React, TypeScript e Payload CMS. Também participei do desenvolvimento da plataforma de Patrocínios, cuja interface atual usa React, Vite e Tailwind CSS.</dd>
+            <dd>Outros projetos incluem EmbraturLAB, Marca Brasil e Parques Naturais. Também tenho experiência com JavaScript, WordPress, Elementor e JetEngine.</dd>
+          </div>
+          <div>
+            <dt>Estagiário de desenvolvimento · Embratur</dt>
+            <dd>Ago. de 2023 – fev. de 2025</dd>
+            <dd>Desenvolvi sites e aplicações usando Angular no front-end e Google Workspace e ferramentas low-code em soluções internas.</dd>
+          </div>
+        </dl>
       </div>
-      <ol>
-        <li><p class="eyebrow">Fev. de 2025 – atual</p><h3>Desenvolvedor júnior</h3><p>Embratur · Terceirizado</p><p>Sites e sistemas com WordPress, Elementor e JetEngine.</p></li>
-        <li><p class="eyebrow">Ago. de 2023 – fev. de 2025</p><h3>Estagiário de desenvolvimento</h3><p>Embratur</p><p>Sites e aplicações com Angular, Google Workspace e ferramentas low-code.</p></li>
-      </ol>
+      <div>
+        <h2>Formação</h2>
+        <dl>
+          <div>
+            <dt>MBA em Segurança da Informação</dt>
+            <dd>UniAmérica · concluído em nov. de 2026 · 360 h</dd>
+          </div>
+          <div>
+            <dt>Análise e Desenvolvimento de Sistemas</dt>
+            <dd>UniCEUB · concluído em 2025</dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
-    <section id="contato" class="wrap contact" aria-labelledby="contato-titulo">
-      <div><h2 id="contato-titulo">Contato</h2><p>Fale comigo pelo LinkedIn ou explore meu código no GitHub.</p></div>
-      <div class="actions"><a class="button primary" href="https://www.linkedin.com/in/gabriel-rodrigues-dev/">LinkedIn <span aria-hidden="true">↗</span></a><a class="button secondary" href="https://github.com/Gabriel-Rodris">GitHub <span aria-hidden="true">↗</span></a></div>
+    <section class="wrap studio" id="dotsmith" aria-labelledby="titulo-dotsmith">
+      <header class="section-head">
+        <div>
+          <p class="kicker">Jogos independentes</p>
+          <h2 id="titulo-dotsmith">DotSmith</h2>
+        </div>
+        <p>Faço parte da DotSmith, estúdio de jogos independentes.</p>
+      </header>
+      <div class="studio-list">
+        <article class="game game-feature">
+          <img src="assets/runecast.webp" alt="Captura de uma batalha em Runecast" width="1180" height="664" loading="lazy">
+          <div class="game-copy">
+            <h3>Runecast</h3>
+            <p>Jogo de estratégia com runas, formação de equipe e combates automáticos.</p>
+            <a class="case-link" href="https://store.steampowered.com/app/5126340/Runecast/" target="_blank" rel="noopener noreferrer">Runecast na Steam <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="game">
+          <img src="assets/cacarola.webp" alt="Equipe enfrentando a Serpe-Pimenta em Caçarola" width="960" height="540" loading="lazy">
+          <div class="game-copy">
+            <h3>Caçarola</h3>
+            <p>RPG de ação cooperativo em que a equipe caça criaturas feitas de comida e cozinha o que encontra.</p>
+            <a class="case-link" href="https://store.steampowered.com/app/5370000/Cacarola/" target="_blank" rel="noopener noreferrer">Caçarola na Steam <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="game">
+          <img src="assets/peso-pena-luta.webp" alt="Dodô ataca Tico Relâmpago durante uma luta de boxe em Peso Pena" width="960" height="540" loading="lazy">
+          <div class="game-copy">
+            <h3>Peso Pena</h3>
+            <p>Jogo de boxe com treino, planejamento de golpes e lutas automáticas.</p>
+            <a class="case-link" href="https://store.steampowered.com/app/5296170/" target="_blank" rel="noopener noreferrer">Peso Pena na Steam <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
-  <footer class="wrap">Gabriel Rodrigues <a href="#conteudo">Voltar ao início ↑</a></footer>
+
+  <footer class="contact" id="contato">
+    <div class="wrap footer">
+      <div>
+        <h2>Vamos conversar?</h2>
+        <p>Me encontre no LinkedIn e no GitHub.</p>
+      </div>
+      <div class="actions">
+        <a class="action" href="https://www.linkedin.com/in/gabriel-rodrigues-dev/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a class="plain" href="https://github.com/Gabriel-Rodris" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="plain" href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
